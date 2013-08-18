@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>says budda</title>
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+<html ng-app='buddaApp'>
 
-  <body>    
-  </br>
-  </br>  
-</br>  </br>  
-</br>
-  </br><center>
-      <h1 id="access">what would the budd[h]a say?<span style="font-size:12px"></h1>  </br>
-  </br>
-      <div id="fadein">
-      <h1>
-        You can do it, Mona!
-      </h1>
-  </br>
-      <p>
-        Hope your zebra could schedule in some sleep thread in your busy life and cash some happiness for easier access!
-      </p>
-      </div><!--fadein--></center>
-  </body>
+<head>
+    <meta charset='utf-8'>
+    <title>WWTBS</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+    <script src="http://d3js.org/d3.v2.js"></script>
+    <script src="js/movie_controller.js"></script>
+    <script src="data/data_movie.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+</head>
 
-  <script type="text/javascript" src="js/jquery.min.js" charset="utf-8" ></script>
-  <script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
-    
+<body>
+<div ng-controller='movieNameCtrl'>
+    <center>
+    <br>
+    <br>
+    <br>
+    <input type="string" ng-model="noun">
+    <br>
+    <br>
+    <a class="btn" ng-click="getMovie()">Get a Movie!</a>
+    <br>
+    <br>
+    <br>
+    <a ng-href="{{link}}"><h1>{{replaced_name + year}}</h1></a>
+    </center>
+</div>
+</body>
 </html>
